@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14DEE45AA12607E2DAAD73C4 /* libPods-mhsyCoredata.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2851A1F6BD095339B2FD033 /* libPods-mhsyCoredata.a */; };
 		58B2C5681E3604BC00F941B8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B2C5671E3604BC00F941B8 /* main.m */; };
 		58B2C56B1E3604BC00F941B8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B2C56A1E3604BC00F941B8 /* AppDelegate.m */; };
 		58B2C56E1E3604BC00F941B8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B2C56D1E3604BC00F941B8 /* ViewController.m */; };
 		58B2C5711E3604BC00F941B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58B2C56F1E3604BC00F941B8 /* Main.storyboard */; };
 		58B2C5731E3604BC00F941B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58B2C5721E3604BC00F941B8 /* Assets.xcassets */; };
 		58B2C5761E3604BC00F941B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58B2C5741E3604BC00F941B8 /* LaunchScreen.storyboard */; };
+		58B2C5871E360B0C00F941B8 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B2C5861E360B0C00F941B8 /* TabBarController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F957458766308A6A17CCCBA /* Pods-mhsyCoredata.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mhsyCoredata.release.xcconfig"; path = "Pods/Target Support Files/Pods-mhsyCoredata/Pods-mhsyCoredata.release.xcconfig"; sourceTree = "<group>"; };
 		58B2C5631E3604BC00F941B8 /* mhsyCoredata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mhsyCoredata.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58B2C5671E3604BC00F941B8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		58B2C5691E3604BC00F941B8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +29,10 @@
 		58B2C5721E3604BC00F941B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58B2C5751E3604BC00F941B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		58B2C5771E3604BC00F941B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58B2C5851E360AFB00F941B8 /* TabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TabBarController.h; path = ViewControllers/TabBar/TabBarController.h; sourceTree = "<group>"; };
+		58B2C5861E360B0C00F941B8 /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TabBarController.m; path = ViewControllers/TabBar/TabBarController.m; sourceTree = "<group>"; };
+		95884B35ACDD9ED378C07247 /* Pods-mhsyCoredata.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mhsyCoredata.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mhsyCoredata/Pods-mhsyCoredata.debug.xcconfig"; sourceTree = "<group>"; };
+		C2851A1F6BD095339B2FD033 /* libPods-mhsyCoredata.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mhsyCoredata.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14DEE45AA12607E2DAAD73C4 /* libPods-mhsyCoredata.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +52,8 @@
 			children = (
 				58B2C5651E3604BC00F941B8 /* mhsyCoredata */,
 				58B2C5641E3604BC00F941B8 /* Products */,
+				B73FD31FAA99257BFEAABDBD /* Pods */,
+				F8C5E5B041A091CC640D80FC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +68,7 @@
 		58B2C5651E3604BC00F941B8 /* mhsyCoredata */ = {
 			isa = PBXGroup;
 			children = (
+				58B2C57D1E36093200F941B8 /* ViewControllers */,
 				58B2C5691E3604BC00F941B8 /* AppDelegate.h */,
 				58B2C56A1E3604BC00F941B8 /* AppDelegate.m */,
 				58B2C56C1E3604BC00F941B8 /* ViewController.h */,
@@ -79,6 +90,88 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		58B2C57D1E36093200F941B8 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				58B2C5841E360A2000F941B8 /* TabBar */,
+				58B2C5831E360A0C00F941B8 /* AppSetting */,
+				58B2C5821E3609CF00F941B8 /* SkillCollection */,
+				58B2C5811E36099300F941B8 /* PartnerCollection */,
+				58B2C5801E36098A00F941B8 /* PetCollection */,
+				58B2C57F1E36095200F941B8 /* JobCollection */,
+				58B2C57E1E36094C00F941B8 /* Base */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		58B2C57E1E36094C00F941B8 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		58B2C57F1E36095200F941B8 /* JobCollection */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = JobCollection;
+			sourceTree = "<group>";
+		};
+		58B2C5801E36098A00F941B8 /* PetCollection */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = PetCollection;
+			sourceTree = "<group>";
+		};
+		58B2C5811E36099300F941B8 /* PartnerCollection */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = PartnerCollection;
+			sourceTree = "<group>";
+		};
+		58B2C5821E3609CF00F941B8 /* SkillCollection */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = SkillCollection;
+			sourceTree = "<group>";
+		};
+		58B2C5831E360A0C00F941B8 /* AppSetting */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = AppSetting;
+			sourceTree = "<group>";
+		};
+		58B2C5841E360A2000F941B8 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				58B2C5851E360AFB00F941B8 /* TabBarController.h */,
+				58B2C5861E360B0C00F941B8 /* TabBarController.m */,
+			);
+			name = TabBar;
+			sourceTree = "<group>";
+		};
+		B73FD31FAA99257BFEAABDBD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				95884B35ACDD9ED378C07247 /* Pods-mhsyCoredata.debug.xcconfig */,
+				1F957458766308A6A17CCCBA /* Pods-mhsyCoredata.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F8C5E5B041A091CC640D80FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C2851A1F6BD095339B2FD033 /* libPods-mhsyCoredata.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +179,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 58B2C57A1E3604BC00F941B8 /* Build configuration list for PBXNativeTarget "mhsyCoredata" */;
 			buildPhases = (
+				877A3F3DD9F069F31DBB79CF /* [CP] Check Pods Manifest.lock */,
 				58B2C55F1E3604BC00F941B8 /* Sources */,
 				58B2C5601E3604BC00F941B8 /* Frameworks */,
 				58B2C5611E3604BC00F941B8 /* Resources */,
+				C48B0819D95FFF632C56C0CC /* [CP] Embed Pods Frameworks */,
+				18BDB6454B3B1E4B0BDFDE67 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -146,12 +242,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		18BDB6454B3B1E4B0BDFDE67 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mhsyCoredata/Pods-mhsyCoredata-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		877A3F3DD9F069F31DBB79CF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C48B0819D95FFF632C56C0CC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mhsyCoredata/Pods-mhsyCoredata-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		58B2C55F1E3604BC00F941B8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				58B2C56E1E3604BC00F941B8 /* ViewController.m in Sources */,
+				58B2C5871E360B0C00F941B8 /* TabBarController.m in Sources */,
 				58B2C56B1E3604BC00F941B8 /* AppDelegate.m in Sources */,
 				58B2C5681E3604BC00F941B8 /* main.m in Sources */,
 			);
@@ -271,6 +416,7 @@
 		};
 		58B2C57B1E3604BC00F941B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95884B35ACDD9ED378C07247 /* Pods-mhsyCoredata.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 887CVK63XR;
@@ -284,6 +430,7 @@
 		};
 		58B2C57C1E3604BC00F941B8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F957458766308A6A17CCCBA /* Pods-mhsyCoredata.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 887CVK63XR;
@@ -314,6 +461,7 @@
 				58B2C57C1E3604BC00F941B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
