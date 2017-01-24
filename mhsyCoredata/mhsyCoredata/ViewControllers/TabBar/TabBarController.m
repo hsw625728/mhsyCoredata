@@ -8,7 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "TabBarController.h"
-
+#import "SkillListViewController.h"
+#import "PartnerListViewController.h"
+#import "PetListViewController.h"
+#import "JobListViewController.h"
 
 
 @interface TabBarController ()
@@ -22,21 +25,25 @@
     self = [super init];
     if (self)
     {
-        /*
-        DMMonsterListViewController *cateViewController = [[DMMonsterListViewController alloc] init];
+        
+        JobListViewController *cateViewController = [[JobListViewController alloc] init];
         UINavigationController *cateNavigationController = [[UINavigationController alloc] initWithRootViewController:cateViewController];
-        cateNavigationController.title = DMMonsterList;
+        cateNavigationController.title = TitleJobList;
         
-        DMMonsterOptViewController *cateViewController1 = [[DMMonsterOptViewController alloc] init];
+        PetListViewController *cateViewController1 = [[PetListViewController alloc] init];
         UINavigationController *cateNavigationController1 = [[UINavigationController alloc] initWithRootViewController:cateViewController1];
-        cateNavigationController1.title = DMMonsterOpt;
+        cateNavigationController1.title = TitlePetList;
         
-        DMAppSettingViewController *cateViewController3 = [[DMAppSettingViewController alloc] init];
+        PartnerListViewController *cateViewController2 = [[PartnerListViewController alloc] init];
+        UINavigationController *cateNavigationController2 = [[UINavigationController alloc] initWithRootViewController:cateViewController2];
+        cateNavigationController2.title = TitlePartnerList;
+        
+        SkillListViewController *cateViewController3 = [[SkillListViewController alloc] init];
         UINavigationController *cateNavigationController3 = [[UINavigationController alloc] initWithRootViewController:cateViewController3];
-        cateNavigationController3.title = DMAppSetting;
+        cateNavigationController3.title = TitleSkillList;
         
-        [self setViewControllers:@[cateNavigationController, cateNavigationController1, cateNavigationController3]];
-        */
+        [self setViewControllers:@[cateNavigationController, cateNavigationController1, cateNavigationController2, cateNavigationController3]];
+        
         [self setupTabBar];
     }
     return self;

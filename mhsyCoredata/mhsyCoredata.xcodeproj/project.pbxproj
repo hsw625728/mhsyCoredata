@@ -10,11 +10,27 @@
 		14DEE45AA12607E2DAAD73C4 /* libPods-mhsyCoredata.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2851A1F6BD095339B2FD033 /* libPods-mhsyCoredata.a */; };
 		58B2C5681E3604BC00F941B8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B2C5671E3604BC00F941B8 /* main.m */; };
 		58B2C56B1E3604BC00F941B8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B2C56A1E3604BC00F941B8 /* AppDelegate.m */; };
-		58B2C56E1E3604BC00F941B8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B2C56D1E3604BC00F941B8 /* ViewController.m */; };
 		58B2C5711E3604BC00F941B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58B2C56F1E3604BC00F941B8 /* Main.storyboard */; };
 		58B2C5731E3604BC00F941B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58B2C5721E3604BC00F941B8 /* Assets.xcassets */; };
 		58B2C5761E3604BC00F941B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58B2C5741E3604BC00F941B8 /* LaunchScreen.storyboard */; };
 		58B2C5871E360B0C00F941B8 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B2C5861E360B0C00F941B8 /* TabBarController.m */; };
+		58B2C58A1E37381100F941B8 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B2C5891E37381100F941B8 /* BaseViewController.m */; };
+		58B2C5921E3738D300F941B8 /* UIImage+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B2C5911E3738D300F941B8 /* UIImage+Common.m */; };
+		58B2C5961E373AF600F941B8 /* JobListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B2C5951E373AF600F941B8 /* JobListViewController.m */; };
+		58B2C59A1E373B2C00F941B8 /* JobDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B2C5991E373B2C00F941B8 /* JobDetailViewController.m */; };
+		58B2C59C1E373B4E00F941B8 /* PetListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B2C59B1E373B4E00F941B8 /* PetListViewController.m */; };
+		58B2C5A01E373B7F00F941B8 /* PetDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B2C59F1E373B7F00F941B8 /* PetDetailViewController.m */; };
+		58B2C5A21E373B9900F941B8 /* PartnerListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B2C5A11E373B9900F941B8 /* PartnerListViewController.m */; };
+		58B2C5A61E373BC600F941B8 /* PartnerDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B2C5A51E373BC600F941B8 /* PartnerDetailViewController.m */; };
+		58B2C5A81E373BDA00F941B8 /* SkillListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B2C5A71E373BDA00F941B8 /* SkillListViewController.m */; };
+		58B2C5AC1E373C0F00F941B8 /* SkillDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B2C5AB1E373C0F00F941B8 /* SkillDetailViewController.m */; };
+		58B2C5AE1E373F1600F941B8 /* TableJobDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B2C5AD1E373F1600F941B8 /* TableJobDetailCell.m */; };
+		58B2C5B21E373F4E00F941B8 /* TableListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B2C5B11E373F4E00F941B8 /* TableListCell.m */; };
+		58B2C5B41E373F6400F941B8 /* TableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B2C5B31E373F6400F941B8 /* TableHeaderView.m */; };
+		58B2C5B81E37405300F941B8 /* TablePetDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B2C5B71E37405300F941B8 /* TablePetDetailCell.m */; };
+		58B2C5BA1E37448300F941B8 /* TableSkillDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B2C5B91E37448300F941B8 /* TableSkillDetailCell.m */; };
+		58B2C5BE1E3744C700F941B8 /* TablePartnerDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B2C5BD1E3744C700F941B8 /* TablePartnerDetailCell.m */; };
+		58B2C5C01E3745D800F941B8 /* BaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B2C5BF1E3745D800F941B8 /* BaseCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,14 +39,49 @@
 		58B2C5671E3604BC00F941B8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		58B2C5691E3604BC00F941B8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		58B2C56A1E3604BC00F941B8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		58B2C56C1E3604BC00F941B8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		58B2C56D1E3604BC00F941B8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		58B2C5701E3604BC00F941B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		58B2C5721E3604BC00F941B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58B2C5751E3604BC00F941B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		58B2C5771E3604BC00F941B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58B2C5851E360AFB00F941B8 /* TabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TabBarController.h; path = ViewControllers/TabBar/TabBarController.h; sourceTree = "<group>"; };
 		58B2C5861E360B0C00F941B8 /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TabBarController.m; path = ViewControllers/TabBar/TabBarController.m; sourceTree = "<group>"; };
+		58B2C5881E37380400F941B8 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BaseViewController.h; path = ViewControllers/Base/BaseViewController.h; sourceTree = "<group>"; };
+		58B2C5891E37381100F941B8 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseViewController.m; path = ViewControllers/Base/BaseViewController.m; sourceTree = "<group>"; };
+		58B2C58E1E3738C900F941B8 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = Common/Headers/Constants.h; sourceTree = "<group>"; };
+		58B2C58F1E3738C900F941B8 /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Macros.h; path = Common/Headers/Macros.h; sourceTree = "<group>"; };
+		58B2C5901E3738D300F941B8 /* UIImage+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Common.h"; path = "Common/Plugin/UIImage+Common.h"; sourceTree = "<group>"; };
+		58B2C5911E3738D300F941B8 /* UIImage+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Common.m"; path = "Common/Plugin/UIImage+Common.m"; sourceTree = "<group>"; };
+		58B2C5931E3739EA00F941B8 /* mhsyCoredata.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mhsyCoredata.pch; sourceTree = "<group>"; };
+		58B2C5951E373AF600F941B8 /* JobListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JobListViewController.m; path = ViewControllers/JobCollection/JobListViewController.m; sourceTree = "<group>"; };
+		58B2C5971E373B0200F941B8 /* JobListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JobListViewController.h; path = ViewControllers/JobCollection/JobListViewController.h; sourceTree = "<group>"; };
+		58B2C5981E373B2000F941B8 /* JobDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JobDetailViewController.h; path = ViewControllers/JobCollection/JobDetailViewController.h; sourceTree = "<group>"; };
+		58B2C5991E373B2C00F941B8 /* JobDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JobDetailViewController.m; path = ViewControllers/JobCollection/JobDetailViewController.m; sourceTree = "<group>"; };
+		58B2C59B1E373B4E00F941B8 /* PetListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PetListViewController.m; path = ViewControllers/PetCollection/PetListViewController.m; sourceTree = "<group>"; };
+		58B2C59D1E373B5A00F941B8 /* PetListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PetListViewController.h; path = ViewControllers/PetCollection/PetListViewController.h; sourceTree = "<group>"; };
+		58B2C59E1E373B7300F941B8 /* PetDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PetDetailViewController.h; path = ViewControllers/PetCollection/PetDetailViewController.h; sourceTree = "<group>"; };
+		58B2C59F1E373B7F00F941B8 /* PetDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PetDetailViewController.m; path = ViewControllers/PetCollection/PetDetailViewController.m; sourceTree = "<group>"; };
+		58B2C5A11E373B9900F941B8 /* PartnerListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PartnerListViewController.m; path = ViewControllers/PartnerCollection/PartnerListViewController.m; sourceTree = "<group>"; };
+		58B2C5A31E373BA300F941B8 /* PartnerListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PartnerListViewController.h; path = ViewControllers/PartnerCollection/PartnerListViewController.h; sourceTree = "<group>"; };
+		58B2C5A41E373BBB00F941B8 /* PartnerDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PartnerDetailViewController.h; path = ViewControllers/PartnerCollection/PartnerDetailViewController.h; sourceTree = "<group>"; };
+		58B2C5A51E373BC600F941B8 /* PartnerDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PartnerDetailViewController.m; path = ViewControllers/PartnerCollection/PartnerDetailViewController.m; sourceTree = "<group>"; };
+		58B2C5A71E373BDA00F941B8 /* SkillListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SkillListViewController.m; path = ViewControllers/SkillCollection/SkillListViewController.m; sourceTree = "<group>"; };
+		58B2C5A91E373BEC00F941B8 /* SkillListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SkillListViewController.h; path = ViewControllers/SkillCollection/SkillListViewController.h; sourceTree = "<group>"; };
+		58B2C5AA1E373C0400F941B8 /* SkillDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SkillDetailViewController.h; path = ViewControllers/SkillCollection/SkillDetailViewController.h; sourceTree = "<group>"; };
+		58B2C5AB1E373C0F00F941B8 /* SkillDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SkillDetailViewController.m; path = ViewControllers/SkillCollection/SkillDetailViewController.m; sourceTree = "<group>"; };
+		58B2C5AD1E373F1600F941B8 /* TableJobDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableJobDetailCell.m; path = CustomViews/TableJobDetailCell.m; sourceTree = "<group>"; };
+		58B2C5AF1E373F2500F941B8 /* TableJobDetailCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TableJobDetailCell.h; path = CustomViews/TableJobDetailCell.h; sourceTree = "<group>"; };
+		58B2C5B01E373F4100F941B8 /* TableListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TableListCell.h; path = CustomViews/TableListCell.h; sourceTree = "<group>"; };
+		58B2C5B11E373F4E00F941B8 /* TableListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableListCell.m; path = CustomViews/TableListCell.m; sourceTree = "<group>"; };
+		58B2C5B31E373F6400F941B8 /* TableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableHeaderView.m; path = CustomViews/TableHeaderView.m; sourceTree = "<group>"; };
+		58B2C5B51E373F6E00F941B8 /* TableHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TableHeaderView.h; path = CustomViews/TableHeaderView.h; sourceTree = "<group>"; };
+		58B2C5B61E37404700F941B8 /* TablePetDetailCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TablePetDetailCell.h; path = CustomViews/TablePetDetailCell.h; sourceTree = "<group>"; };
+		58B2C5B71E37405300F941B8 /* TablePetDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TablePetDetailCell.m; path = CustomViews/TablePetDetailCell.m; sourceTree = "<group>"; };
+		58B2C5B91E37448300F941B8 /* TableSkillDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableSkillDetailCell.m; path = CustomViews/TableSkillDetailCell.m; sourceTree = "<group>"; };
+		58B2C5BB1E37448E00F941B8 /* TableSkillDetailCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TableSkillDetailCell.h; path = CustomViews/TableSkillDetailCell.h; sourceTree = "<group>"; };
+		58B2C5BC1E3744BC00F941B8 /* TablePartnerDetailCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TablePartnerDetailCell.h; path = CustomViews/TablePartnerDetailCell.h; sourceTree = "<group>"; };
+		58B2C5BD1E3744C700F941B8 /* TablePartnerDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TablePartnerDetailCell.m; path = CustomViews/TablePartnerDetailCell.m; sourceTree = "<group>"; };
+		58B2C5BF1E3745D800F941B8 /* BaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseCell.m; path = CustomViews/BaseCell.m; sourceTree = "<group>"; };
+		58B2C5C11E3745E200F941B8 /* BaseCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BaseCell.h; path = CustomViews/BaseCell.h; sourceTree = "<group>"; };
 		95884B35ACDD9ED378C07247 /* Pods-mhsyCoredata.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mhsyCoredata.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mhsyCoredata/Pods-mhsyCoredata.debug.xcconfig"; sourceTree = "<group>"; };
 		C2851A1F6BD095339B2FD033 /* libPods-mhsyCoredata.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mhsyCoredata.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -68,11 +119,12 @@
 		58B2C5651E3604BC00F941B8 /* mhsyCoredata */ = {
 			isa = PBXGroup;
 			children = (
+				58B2C5941E373A5400F941B8 /* CustomViews */,
+				58B2C58B1E37386700F941B8 /* Common */,
 				58B2C57D1E36093200F941B8 /* ViewControllers */,
 				58B2C5691E3604BC00F941B8 /* AppDelegate.h */,
 				58B2C56A1E3604BC00F941B8 /* AppDelegate.m */,
-				58B2C56C1E3604BC00F941B8 /* ViewController.h */,
-				58B2C56D1E3604BC00F941B8 /* ViewController.m */,
+				58B2C5931E3739EA00F941B8 /* mhsyCoredata.pch */,
 				58B2C56F1E3604BC00F941B8 /* Main.storyboard */,
 				58B2C5721E3604BC00F941B8 /* Assets.xcassets */,
 				58B2C5741E3604BC00F941B8 /* LaunchScreen.storyboard */,
@@ -107,6 +159,8 @@
 		58B2C57E1E36094C00F941B8 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				58B2C5881E37380400F941B8 /* BaseViewController.h */,
+				58B2C5891E37381100F941B8 /* BaseViewController.m */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -114,6 +168,10 @@
 		58B2C57F1E36095200F941B8 /* JobCollection */ = {
 			isa = PBXGroup;
 			children = (
+				58B2C5951E373AF600F941B8 /* JobListViewController.m */,
+				58B2C5971E373B0200F941B8 /* JobListViewController.h */,
+				58B2C5981E373B2000F941B8 /* JobDetailViewController.h */,
+				58B2C5991E373B2C00F941B8 /* JobDetailViewController.m */,
 			);
 			name = JobCollection;
 			sourceTree = "<group>";
@@ -121,6 +179,10 @@
 		58B2C5801E36098A00F941B8 /* PetCollection */ = {
 			isa = PBXGroup;
 			children = (
+				58B2C59B1E373B4E00F941B8 /* PetListViewController.m */,
+				58B2C59D1E373B5A00F941B8 /* PetListViewController.h */,
+				58B2C59E1E373B7300F941B8 /* PetDetailViewController.h */,
+				58B2C59F1E373B7F00F941B8 /* PetDetailViewController.m */,
 			);
 			name = PetCollection;
 			sourceTree = "<group>";
@@ -128,6 +190,10 @@
 		58B2C5811E36099300F941B8 /* PartnerCollection */ = {
 			isa = PBXGroup;
 			children = (
+				58B2C5A11E373B9900F941B8 /* PartnerListViewController.m */,
+				58B2C5A31E373BA300F941B8 /* PartnerListViewController.h */,
+				58B2C5A41E373BBB00F941B8 /* PartnerDetailViewController.h */,
+				58B2C5A51E373BC600F941B8 /* PartnerDetailViewController.m */,
 			);
 			name = PartnerCollection;
 			sourceTree = "<group>";
@@ -135,6 +201,10 @@
 		58B2C5821E3609CF00F941B8 /* SkillCollection */ = {
 			isa = PBXGroup;
 			children = (
+				58B2C5A71E373BDA00F941B8 /* SkillListViewController.m */,
+				58B2C5A91E373BEC00F941B8 /* SkillListViewController.h */,
+				58B2C5AA1E373C0400F941B8 /* SkillDetailViewController.h */,
+				58B2C5AB1E373C0F00F941B8 /* SkillDetailViewController.m */,
 			);
 			name = SkillCollection;
 			sourceTree = "<group>";
@@ -153,6 +223,54 @@
 				58B2C5861E360B0C00F941B8 /* TabBarController.m */,
 			);
 			name = TabBar;
+			sourceTree = "<group>";
+		};
+		58B2C58B1E37386700F941B8 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				58B2C58D1E37387A00F941B8 /* Headers */,
+				58B2C58C1E37387200F941B8 /* Plugin */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		58B2C58C1E37387200F941B8 /* Plugin */ = {
+			isa = PBXGroup;
+			children = (
+				58B2C5901E3738D300F941B8 /* UIImage+Common.h */,
+				58B2C5911E3738D300F941B8 /* UIImage+Common.m */,
+			);
+			name = Plugin;
+			sourceTree = "<group>";
+		};
+		58B2C58D1E37387A00F941B8 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				58B2C58E1E3738C900F941B8 /* Constants.h */,
+				58B2C58F1E3738C900F941B8 /* Macros.h */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+		58B2C5941E373A5400F941B8 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				58B2C5B01E373F4100F941B8 /* TableListCell.h */,
+				58B2C5B11E373F4E00F941B8 /* TableListCell.m */,
+				58B2C5B51E373F6E00F941B8 /* TableHeaderView.h */,
+				58B2C5B31E373F6400F941B8 /* TableHeaderView.m */,
+				58B2C5AF1E373F2500F941B8 /* TableJobDetailCell.h */,
+				58B2C5AD1E373F1600F941B8 /* TableJobDetailCell.m */,
+				58B2C5B61E37404700F941B8 /* TablePetDetailCell.h */,
+				58B2C5B71E37405300F941B8 /* TablePetDetailCell.m */,
+				58B2C5BB1E37448E00F941B8 /* TableSkillDetailCell.h */,
+				58B2C5B91E37448300F941B8 /* TableSkillDetailCell.m */,
+				58B2C5BC1E3744BC00F941B8 /* TablePartnerDetailCell.h */,
+				58B2C5BD1E3744C700F941B8 /* TablePartnerDetailCell.m */,
+				58B2C5C11E3745E200F941B8 /* BaseCell.h */,
+				58B2C5BF1E3745D800F941B8 /* BaseCell.m */,
+			);
+			name = CustomViews;
 			sourceTree = "<group>";
 		};
 		B73FD31FAA99257BFEAABDBD /* Pods */ = {
@@ -295,10 +413,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58B2C56E1E3604BC00F941B8 /* ViewController.m in Sources */,
+				58B2C59C1E373B4E00F941B8 /* PetListViewController.m in Sources */,
+				58B2C5BA1E37448300F941B8 /* TableSkillDetailCell.m in Sources */,
+				58B2C59A1E373B2C00F941B8 /* JobDetailViewController.m in Sources */,
+				58B2C5A21E373B9900F941B8 /* PartnerListViewController.m in Sources */,
+				58B2C5961E373AF600F941B8 /* JobListViewController.m in Sources */,
+				58B2C58A1E37381100F941B8 /* BaseViewController.m in Sources */,
 				58B2C5871E360B0C00F941B8 /* TabBarController.m in Sources */,
 				58B2C56B1E3604BC00F941B8 /* AppDelegate.m in Sources */,
+				58B2C5921E3738D300F941B8 /* UIImage+Common.m in Sources */,
+				58B2C5B41E373F6400F941B8 /* TableHeaderView.m in Sources */,
+				58B2C5AC1E373C0F00F941B8 /* SkillDetailViewController.m in Sources */,
+				58B2C5AE1E373F1600F941B8 /* TableJobDetailCell.m in Sources */,
+				58B2C5C01E3745D800F941B8 /* BaseCell.m in Sources */,
 				58B2C5681E3604BC00F941B8 /* main.m in Sources */,
+				58B2C5A81E373BDA00F941B8 /* SkillListViewController.m in Sources */,
+				58B2C5A61E373BC600F941B8 /* PartnerDetailViewController.m in Sources */,
+				58B2C5B21E373F4E00F941B8 /* TableListCell.m in Sources */,
+				58B2C5A01E373B7F00F941B8 /* PetDetailViewController.m in Sources */,
+				58B2C5B81E37405300F941B8 /* TablePetDetailCell.m in Sources */,
+				58B2C5BE1E3744C700F941B8 /* TablePartnerDetailCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +554,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 887CVK63XR;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = mhsyCoredata/mhsyCoredata.pch;
 				INFOPLIST_FILE = mhsyCoredata/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -434,6 +570,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 887CVK63XR;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = mhsyCoredata/mhsyCoredata.pch;
 				INFOPLIST_FILE = mhsyCoredata/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
