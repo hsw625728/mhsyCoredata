@@ -13,7 +13,7 @@
 
 @interface SkillDetailViewController : BaseViewController
 
--(void)setSkillName:(NSString*)name;
+-(void)setSkillIndex:(NSInteger)index;
 
 @end
 

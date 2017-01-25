@@ -13,7 +13,7 @@
 
 @interface PartnerDetailViewController : BaseViewController
 
--(void)setPartnerName:(NSString*)name;
+-(void)setPartnerIndex:(NSInteger)index;
 
 @end
 

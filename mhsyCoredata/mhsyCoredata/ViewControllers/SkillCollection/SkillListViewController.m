@@ -129,7 +129,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     SkillDetailViewController *viewController = [[SkillDetailViewController alloc] init];
 
-    [viewController setSkillName:skillListNames[indexPath.row]];
+    [viewController setSkillIndex:indexPath.row];
     [self.navigationController pushViewController:viewController animated:YES];
 }
 

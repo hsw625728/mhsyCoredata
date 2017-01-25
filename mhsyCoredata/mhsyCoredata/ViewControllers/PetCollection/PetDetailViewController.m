@@ -17,11 +17,17 @@
 
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) UITableView *tableView;
+@property (nonatomic, assign) NSInteger petIndex;
 
 @end
 
 @implementation PetDetailViewController{
     AppDelegate *appDelegate;
+    NSArray *petNames;
+    NSArray *petAttrbutes;
+    NSArray *petGet;
+    NSArray *petSkills;
+    NSArray *petRandomSKills;
 }
 
 #pragma mark - Lifecycle
@@ -55,6 +61,13 @@
 
 - (void)initDatas {
     appDelegate =  (AppDelegate *) [[UIApplication sharedApplication] delegate];
+    
+    petNames = PET_LIST_NAMES;
+    petAttrbutes = PET_LIST_ATTRBUTE;
+    petGet = PET_LIST_GET;
+    petSkills = PET_LIST_SKILL;
+    petRandomSKills = PET_LIST_RANDOM_SKILL;
+    
 }
 
 - (void)setupViews {
@@ -98,7 +111,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TablePetDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:kTablePetDetailCellID forIndexPath:indexPath];
     
-    //[cell setIndex:indexPath.row];
+    [cell setPetName:petNames[_petIndex] attrbute:petAttrbutes[_petIndex] get:petGet[_petIndex] skill:petSkills[_petIndex] randSkill:petRandomSKills[_petIndex]];
     return cell;
 }
 
@@ -125,8 +138,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
--(void)setMonsterName:(NSString*)name
-{
-    _name = name;
+-(void)setPartnerIndex:(NSInteger)index{
+    _petIndex = index;
 }
 @end

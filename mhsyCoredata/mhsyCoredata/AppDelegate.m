@@ -65,6 +65,7 @@
 }
 
 - (void)initData{
+    _petSkillDesc = [[NSDictionary alloc] initWithObjectsAndKeys:PET_SKILL_DESC, nil];
 }
 
 @end

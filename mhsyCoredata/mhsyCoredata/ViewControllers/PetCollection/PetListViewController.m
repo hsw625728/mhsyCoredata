@@ -128,7 +128,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     PetDetailViewController *viewController = [[PetDetailViewController alloc] init];
     
-    [viewController setPetName:petListNames[indexPath.row]];
+    [viewController setPetIndex:indexPath.row];
     [self.navigationController pushViewController:viewController animated:YES];
 }
 

@@ -17,11 +17,15 @@
 
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) UITableView *tableView;
+@property (nonatomic, assign) NSInteger partnerIndex;
 
 @end
 
 @implementation PartnerDetailViewController{
     AppDelegate *appDelegate;
+    NSArray *partnerImage;
+    NSArray *partnerName;
+    NSArray *partnerDesc;
 }
 
 #pragma mark - Lifecycle
@@ -55,6 +59,9 @@
 
 - (void)initDatas {
     appDelegate =  (AppDelegate *) [[UIApplication sharedApplication] delegate];
+    partnerImage = PARTNER_LIST_NAMES;
+    partnerName = PARTNER_LIST_NAMES;
+    partnerDesc = PARTNER_LIST_SKILL;
 }
 
 - (void)setupViews {
@@ -98,7 +105,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TablePartnerDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:kTablePartnerDetailCellID forIndexPath:indexPath];
     
-    [cell setPartnerName:_name];
+    [cell setImage:partnerImage[_partnerIndex] name:partnerName[_partnerIndex] desc:partnerDesc[_partnerIndex]];
     return cell;
 }
 
@@ -125,8 +132,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
--(void)setMonsterName:(NSString*)name
-{
-    _name = name;
+-(void)setPartnerIndex:(NSInteger)index{
+    _partnerIndex = index;
 }
 @end

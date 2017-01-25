@@ -17,7 +17,7 @@ FOUNDATION_EXPORT NSString *const kTablePartnerDetailCellID;
 @interface TablePartnerDetailCell : BaseCell
 
 + (CGFloat)cellHeight;
--(void)setPartnerName:(NSString*)name;
+-(void)setImage:(NSString*)i name:(NSString*)n desc:(NSString*)d;
 
 @end
 

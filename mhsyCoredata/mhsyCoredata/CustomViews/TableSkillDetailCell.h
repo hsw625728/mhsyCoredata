@@ -17,7 +17,7 @@ FOUNDATION_EXPORT NSString *const kTableSkillDetailCellID;
 @interface TableSkillDetailCell : BaseCell
 
 + (CGFloat)cellHeight;
--(void)setSkillName:(NSString*)name;
+-(void)setImage:(NSString*)i name:(NSString*)n desc:(NSString*)d;
 
 @end
 

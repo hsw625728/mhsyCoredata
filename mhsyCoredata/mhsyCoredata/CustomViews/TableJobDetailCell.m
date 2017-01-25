@@ -14,8 +14,6 @@ NSString *const kTableJobDetailCellID = @"kTableJobDetailCellID";
 
 @interface TableJobDetailCell ()
 
-@property (nonatomic, assign) NSInteger section;
-@property (nonatomic, assign) NSInteger index;
 @property (strong, nonatomic) UIImageView *leftImageView;
 @property (strong, nonatomic) UILabel *labelName;
 @property (strong, nonatomic) UILabel *labelDesc;

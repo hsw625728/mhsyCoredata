@@ -17,11 +17,15 @@
 
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) UITableView *tableView;
+@property (nonatomic, assign) NSInteger skillIndex;
 
 @end
 
 @implementation SkillDetailViewController{
     AppDelegate *appDelegate;
+    NSArray *skillImage;
+    NSArray *skillName;
+    NSArray *skillDesc;
 }
 
 #pragma mark - Lifecycle
@@ -55,6 +59,9 @@
 
 - (void)initDatas {
     appDelegate =  (AppDelegate *) [[UIApplication sharedApplication] delegate];
+    skillImage = SKILL_LIST_NAMES;
+    skillName = SKILL_LIST_NAMES;
+    skillDesc = SKILL_LIST_DESC;
 }
 
 - (void)setupViews {
@@ -98,7 +105,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TableSkillDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:kTableSkillDetailCellID forIndexPath:indexPath];
     
-    [cell setSkillName:_name];
+    [cell setImage:[NSString stringWithFormat:@"%@_small", skillImage[_skillIndex]] name:skillName[_skillIndex] desc:skillDesc[_skillIndex]];
     return cell;
 }
 
@@ -125,8 +132,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
--(void)setMonsterName:(NSString*)name
-{
-    _name = name;
+-(void)setSkillIndex:(NSInteger)index{
+    _skillIndex = index;
 }
 @end

@@ -16,12 +16,10 @@ NSString *const kTablePetDetailCellID = @"kTablePetDetailCellID";
 
 @property (strong, nonatomic) UIImageView *leftImageView;
 @property (strong, nonatomic) UILabel *labelName;
-@property (strong, nonatomic) UILabel *labelCategroy;
-@property (strong, nonatomic) UILabel *labelAtk;
-@property (strong, nonatomic) UILabel *labelArm;
-@property (strong, nonatomic) UILabel *labelExp;
-@property (strong, nonatomic) UILabel *labelGold;
-@property (strong, nonatomic) UILabel *labelWeakLevel;
+@property (strong, nonatomic) UILabel *labelAttrbute;
+@property (strong, nonatomic) UILabel *labelGet;
+@property (strong, nonatomic) UILabel *labelSkill;
+@property (strong, nonatomic) UILabel *labelDesc;
 
 @end
 
@@ -30,7 +28,7 @@ NSString *const kTablePetDetailCellID = @"kTablePetDetailCellID";
 #pragma mark - Class Method
 
 + (CGFloat)cellHeight {
-    return 40;
+    return 400;
 }
 
 #pragma mark - View Lifecycle
@@ -88,8 +86,7 @@ NSString *const kTablePetDetailCellID = @"kTablePetDetailCellID";
         label;
     });
     
-    
-    _labelCategroy = ({
+    _labelAttrbute = ({
         UILabel *label = [UILabel new];
         label.backgroundColor = [UIColor whiteColor];
         label.font = FontWithSize(9);
@@ -104,7 +101,7 @@ NSString *const kTablePetDetailCellID = @"kTablePetDetailCellID";
         label;
     });
     
-    _labelWeakLevel = ({
+    _labelGet = ({
         UILabel *label = [UILabel new];
         label.backgroundColor = [UIColor whiteColor];
         label.font = FontWithSize(9);
@@ -119,7 +116,7 @@ NSString *const kTablePetDetailCellID = @"kTablePetDetailCellID";
         label;
     });
     
-    _labelExp = ({
+    _labelSkill = ({
         UILabel *label = [UILabel new];
         label.backgroundColor = [UIColor whiteColor];
         label.font = FontWithSize(9);
@@ -134,7 +131,7 @@ NSString *const kTablePetDetailCellID = @"kTablePetDetailCellID";
         label;
     });
     
-    _labelGold = ({
+    _labelDesc = ({
         UILabel *label = [UILabel new];
         label.backgroundColor = [UIColor whiteColor];
         label.font = FontWithSize(9);
@@ -144,36 +141,6 @@ NSString *const kTablePetDetailCellID = @"kTablePetDetailCellID";
         [label mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.contentView).offset(3);
             make.left.equalTo(_labelName.mas_left).offset(8*WIDTH);
-        }];
-        
-        label;
-    });
-    
-    _labelAtk = ({
-        UILabel *label = [UILabel new];
-        label.backgroundColor = [UIColor whiteColor];
-        label.font = FontWithSize(9);
-        label.textColor = DMLightBlackTextColor;
-        label.numberOfLines = 2;
-        [self.contentView addSubview:label];
-        [label mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self.contentView.mas_centerY).offset(2);
-            make.left.equalTo(_labelName.mas_left).offset(6*WIDTH);
-        }];
-        
-        label;
-    });
-    
-    _labelArm = ({
-        UILabel *label = [UILabel new];
-        label.backgroundColor = [UIColor whiteColor];
-        label.font = FontWithSize(9);
-        label.textColor = DMLightBlackTextColor;
-        label.numberOfLines = 2;
-        [self.contentView addSubview:label];
-        [label mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self.contentView.mas_centerY).offset(2);
-            make.left.equalTo(_labelName.mas_left).offset(9*WIDTH);
         }];
         
         label;
@@ -189,9 +156,15 @@ NSString *const kTablePetDetailCellID = @"kTablePetDetailCellID";
     }];
 }
 
--(void)setName:(NSString*)name
+-(void)setPetName:(NSString*)n attrbute:(NSString*)a get:(NSString*)g skill:(NSArray*)s randSkill:(NSArray*)r
 {
-    _labelName.text = name;
+    _leftImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@_big", n]];
+    _labelName.text = n;
+    _labelAttrbute.text = a;
+    _labelGet.text = g;
+    //暂时写0 需要修改
+    _labelSkill.text = s[0];
+    _labelDesc.text = r[0];
 }
 
 @end

@@ -13,7 +13,7 @@
 
 @interface PetDetailViewController : BaseViewController
 
--(void)setPetName:(NSString*)name;
+-(void)setPetIndex:(NSInteger)index;
 
 @end
 

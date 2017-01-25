@@ -129,7 +129,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     PartnerDetailViewController *viewController = [[PartnerDetailViewController alloc] init];
 
-    [viewController setPartnerName:partnerListNames[indexPath.row]];
+    [viewController setPartnerIndex:indexPath.row];
     [self.navigationController pushViewController:viewController animated:YES];
 }
 
