@@ -98,7 +98,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TablePetDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:kTablePetDetailCellID forIndexPath:indexPath];
     
-    [cell setPetName:_name];
+    //[cell setIndex:indexPath.row];
     return cell;
 }
 

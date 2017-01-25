@@ -13,7 +13,8 @@
 
 @interface JobDetailViewController : BaseViewController
 
--(void)setJobName:(NSString*)name;
+-(void)setJobIndex:(NSInteger)index;
+
 @end
 
 #endif /* JobDetailViewController_h */

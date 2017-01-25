@@ -17,7 +17,7 @@ FOUNDATION_EXPORT NSString *const kTableJobDetailCellID;
 @interface TableJobDetailCell : BaseCell
 
 + (CGFloat)cellHeight;
--(void)setJobName:(NSString*)name;
+-(void)setImage:(NSString*)i name:(NSString*)n desc:(NSString*)d;
 
 @end
 

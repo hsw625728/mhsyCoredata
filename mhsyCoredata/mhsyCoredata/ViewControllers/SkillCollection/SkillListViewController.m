@@ -23,6 +23,7 @@
 
 @implementation SkillListViewController{
     AppDelegate *appDelegate;
+    NSArray *skillListNames;
 }
 
 #pragma mark - Lifecycle
@@ -43,7 +44,7 @@
     
     self.navigationItem.title = TitleSkillList;
     
-    [self addNavigationBarLeftSearchItem];
+    //[self addNavigationBarLeftSearchItem];
     [self setupViews];
     
     //设置导航栏
@@ -52,12 +53,12 @@
     
     [self initDatas];
     [self setupViews];
-    
 }
 #pragma mark - Private Method
 
 - (void)initDatas {
     appDelegate =  (AppDelegate *) [[UIApplication sharedApplication] delegate];
+    skillListNames = SKILL_LIST_NAMES;
 }
 
 - (void)setupViews {
@@ -90,22 +91,18 @@
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    //return appDelegate.gMonsterCategroy.count;
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    //NSArray *category = [appDelegate.gMonsterCategroy allKeys];
-    //NSArray *monstersName = [appDelegate.gMonsterCategroy objectForKey:category[section]];
-    //return monstersName.count;
-    return 1;
+    return skillListNames.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TableListCell *cell = [tableView dequeueReusableCellWithIdentifier:kTableListCellID forIndexPath:indexPath];
     
-    //[cell configureCellWithTitle:jobListItems[indexPath.row] imageName:[NSString stringWithFormat:@"%@_small", jobListItems[indexPath.row]] atIndexPath:indexPath];
+    [cell configureCellWithTitle:skillListNames[indexPath.row] imageName:[NSString stringWithFormat:@"%@_small", skillListNames[indexPath.row]] atIndexPath:indexPath];
     return cell;
 }
 
@@ -118,8 +115,8 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     TableHeaderView *view = [tableView dequeueReusableHeaderFooterViewWithIdentifier:kTableHeaderViewID];
-    //NSArray *category = [appDelegate.gMonsterCategroy allKeys];
-    //view.titleLabel.text = category[section];
+    
+    view.titleLabel.text = @"特技列表";
     
     return view;
 }
@@ -131,9 +128,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     SkillDetailViewController *viewController = [[SkillDetailViewController alloc] init];
-    //NSArray *category = [appDelegate.gMonsterCategroy allKeys];
-    //NSArray *monstersName = [appDelegate.gMonsterCategroy objectForKey:category[indexPath.section]];
-    [viewController setSkillName:@""];
+
+    [viewController setSkillName:skillListNames[indexPath.row]];
     [self.navigationController pushViewController:viewController animated:YES];
 }
 

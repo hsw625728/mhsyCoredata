@@ -16,11 +16,15 @@
 @interface JobDetailViewController() <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) UITableView *tableView;
+@property (nonatomic, assign) NSInteger jobIndex;
 
 @end
 
 @implementation JobDetailViewController{
     AppDelegate *appDelegate;
+    NSArray *jobListDesc;
+    NSArray *jobListSkillNames;
+    NSArray *jobListSkillDesc;
 }
 
 #pragma mark - Lifecycle
@@ -41,7 +45,7 @@
     
     self.navigationItem.title = TitleJobList;
     
-    [self addNavigationBarLeftSearchItem];
+    //[self addNavigationBarLeftSearchItem];
     [self setupViews];
     
     //设置导航栏
@@ -56,6 +60,10 @@
 
 - (void)initDatas {
     appDelegate =  (AppDelegate *) [[UIApplication sharedApplication] delegate];
+    
+    jobListDesc = JOB_LIST_DESC;
+    jobListSkillNames = JOB_LIST_SKILL_NAME;
+    jobListSkillDesc = JOB_LIST_SKILL_DESC;
 }
 
 - (void)setupViews {
@@ -88,30 +96,18 @@
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    //return appDelegate.gMonsterCategroy.count;
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    //NSArray *category = [appDelegate.gMonsterCategroy allKeys];
-    //NSArray *monstersName = [appDelegate.gMonsterCategroy objectForKey:category[section]];
-    //return monstersName.count;
-    return 1;
+    return ((NSArray*)JOB_LIST_SKILL_NAME[_jobIndex]).count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TableJobDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:kTableJobDetailCellID forIndexPath:indexPath];
-    /*
-     DSSkillDetailItem *model = [[DSSkillDetailItem alloc] init];
-     model.skillName = appDelegate.gSkillInfo.skillName[indexPath.section][indexPath.row];
-     model.skillPoint = appDelegate.gSkillInfo.skillPoint[indexPath.section][indexPath.row];
-     model.skillDesc = appDelegate.gSkillInfo.skillDesc[indexPath.section][indexPath.row];
-     [(DSTableDetailCell *)cell configureCellWithSearchItem:(DSSkillDetailItem *)model];
-     */
-    //NSArray *category = [appDelegate.gMonsterCategroy allKeys];
-    //NSArray *monstersName = [appDelegate.gMonsterCategroy objectForKey:category[indexPath.section]];
-    [cell setJobName:@""];
+
+    [cell setImage:jobListSkillNames[_jobIndex][indexPath.row] name:jobListSkillNames[_jobIndex][indexPath.row] desc:jobListSkillDesc[_jobIndex][indexPath.row]];
     return cell;
 }
 
@@ -135,12 +131,16 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    /*
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     TableJobDetailCell *viewController = [[TableJobDetailCell alloc] init];
-    //NSArray *category = [appDelegate.gMonsterCategroy allKeys];
-    //NSArray *monstersName = [appDelegate.gMonsterCategroy objectForKey:category[indexPath.section]];
-    [viewController setJobName:@""];
+
+    [viewController setSection:_jobIndex index:indexPath.row];
     [self.navigationController pushViewController:viewController animated:YES];
+     */
+}
+-(void)setJobIndex:(NSInteger)index{
+    _jobIndex = index;
 }
 
 @end

@@ -46,7 +46,7 @@
     
     self.navigationItem.title = TitleJobList;
     
-    [self addNavigationBarLeftSearchItem];
+    //[self addNavigationBarLeftSearchItem];
     [self setupViews];
     
     //设置导航栏
@@ -136,7 +136,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     JobDetailViewController *viewController = [[JobDetailViewController alloc] init];
     
-    [viewController setJobName:jobListItems[indexPath.row]];
+    [viewController setJobIndex:indexPath.row];
     [self.navigationController pushViewController:viewController animated:YES];
 }
 
