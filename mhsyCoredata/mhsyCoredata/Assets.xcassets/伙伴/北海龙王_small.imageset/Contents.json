@@ -4,6 +4,14 @@
       "idiom" : "universal",
       "filename" : "北海龙王_small.png",
       "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
     }
   ],
   "info" : {

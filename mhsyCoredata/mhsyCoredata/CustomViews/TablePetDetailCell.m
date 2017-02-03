@@ -16,9 +16,6 @@ NSString *const kTablePetDetailCellID = @"kTablePetDetailCellID";
 
 @property (strong, nonatomic) UIImageView *leftImageView;
 @property (strong, nonatomic) UILabel *labelName;
-@property (strong, nonatomic) UILabel *labelAttrbute;
-@property (strong, nonatomic) UILabel *labelGet;
-@property (strong, nonatomic) UILabel *labelSkill;
 @property (strong, nonatomic) UILabel *labelDesc;
 
 @end
@@ -28,7 +25,7 @@ NSString *const kTablePetDetailCellID = @"kTablePetDetailCellID";
 #pragma mark - Class Method
 
 + (CGFloat)cellHeight {
-    return 400;
+    return 52;
 }
 
 #pragma mark - View Lifecycle
@@ -50,8 +47,8 @@ NSString *const kTablePetDetailCellID = @"kTablePetDetailCellID";
 #pragma mark - Private Method
 
 - (void)setupViews {
-    const int ICON_WIDE = 38;
-    const int ICON_HEIGH = 38;
+    const int ICON_WIDE = 50;
+    const int ICON_HEIGH = 50;
     
     self.backgroundColor = [UIColor whiteColor];
     self.contentView.backgroundColor = [UIColor whiteColor];
@@ -64,9 +61,10 @@ NSString *const kTablePetDetailCellID = @"kTablePetDetailCellID";
         imageView.contentMode = UIViewContentModeCenter;
         [self.contentView addSubview:imageView];
         [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.size.sizeOffset(CGSizeMake(ICON_WIDE, ICON_HEIGH));
-            make.centerY.equalTo(self.contentView);
-            make.left.equalTo(self.contentView).offset(8);
+            //make.size.equalTo(self.contentView);//(CGSizeMake(ICON_WIDE, ICON_HEIGH));
+            make.top.equalTo(self.contentView);
+            make.left.equalTo(self.contentView);
+            //make.right.equalTo(self.contentView);
         }];
         
         imageView;
@@ -74,58 +72,14 @@ NSString *const kTablePetDetailCellID = @"kTablePetDetailCellID";
     
     _labelName = ({
         UILabel *label = [UILabel new];
-        label.backgroundColor = [UIColor whiteColor];
-        label.font = FontWithSize(13);
+        //label.backgroundColor = [UIColor whiteColor];
+        label.font = FontWithSize(16);
         label.textColor = DMLightBlackTextColor;
         [self.contentView addSubview:label];
         [label mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.contentView).offset(1);
             make.left.equalTo(self.contentView).offset(ICON_WIDE + 16);
-        }];
-        
-        label;
-    });
-    
-    _labelAttrbute = ({
-        UILabel *label = [UILabel new];
-        label.backgroundColor = [UIColor whiteColor];
-        label.font = FontWithSize(9);
-        label.textColor = DMLightBlackTextColor;
-        label.numberOfLines = 2;
-        [self.contentView addSubview:label];
-        [label mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self.contentView.mas_centerY).offset(2);
-            make.left.equalTo(self.contentView).offset(ICON_WIDE + 22);
-        }];
-        
-        label;
-    });
-    
-    _labelGet = ({
-        UILabel *label = [UILabel new];
-        label.backgroundColor = [UIColor whiteColor];
-        label.font = FontWithSize(9);
-        label.textColor = DMLightBlackTextColor;
-        label.numberOfLines = 2;
-        [self.contentView addSubview:label];
-        [label mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self.contentView).offset(3);
-            make.left.equalTo(_labelName.mas_left).offset(4*WIDTH);
-        }];
-        
-        label;
-    });
-    
-    _labelSkill = ({
-        UILabel *label = [UILabel new];
-        label.backgroundColor = [UIColor whiteColor];
-        label.font = FontWithSize(9);
-        label.textColor = DMLightBlackTextColor;
-        label.numberOfLines = 2;
-        [self.contentView addSubview:label];
-        [label mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self.contentView.mas_centerY).offset(2);
-            make.left.equalTo(_labelName.mas_left).offset(3*WIDTH);
+            make.right.equalTo(self.contentView).offset(-8);
         }];
         
         label;
@@ -139,32 +93,26 @@ NSString *const kTablePetDetailCellID = @"kTablePetDetailCellID";
         label.numberOfLines = 2;
         [self.contentView addSubview:label];
         [label mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self.contentView).offset(3);
-            make.left.equalTo(_labelName.mas_left).offset(8*WIDTH);
+            make.top.equalTo(_labelName).offset(22);
+            make.left.equalTo(_labelName);
+            make.right.equalTo(_labelName);
         }];
         
         label;
     });
     
-    UIImageView *forwardView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"forward_info"]];
-    [self.contentView addSubview:forwardView];
-    [forwardView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.size.sizeOffset(CGSizeMake(6, 10));
-        make.centerY.equalTo(self.contentView);
-        //make.left.greaterThanOrEqualTo(_titleLabel.mas_right).offset(8);
-        make.right.equalTo(self.contentView).offset(-8);
-    }];
 }
 
--(void)setPetName:(NSString*)n attrbute:(NSString*)a get:(NSString*)g skill:(NSArray*)s randSkill:(NSArray*)r
-{
-    _leftImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@_big", n]];
-    _labelName.text = n;
-    _labelAttrbute.text = a;
-    _labelGet.text = g;
-    //暂时写0 需要修改
-    _labelSkill.text = s[0];
-    _labelDesc.text = r[0];
+-(void)setSkillName:(NSString*)n{
+    _leftImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@_small", n]];
+    if ([n isEqualToString:@""]){
+        _labelName.text = @"无此类型技能";
+    }else{
+        _labelName.text = n;
+    }
+    
+    AppDelegate *appDelegate =  (AppDelegate *) [[UIApplication sharedApplication] delegate];
+    _labelDesc.text = [appDelegate.petSkillDesc objectForKey:n];
 }
 
 @end

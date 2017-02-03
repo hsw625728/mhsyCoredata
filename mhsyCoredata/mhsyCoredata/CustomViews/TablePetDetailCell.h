@@ -17,7 +17,7 @@ FOUNDATION_EXPORT NSString *const kTablePetDetailCellID;
 @interface TablePetDetailCell : BaseCell
 
 + (CGFloat)cellHeight;
--(void)setPetName:(NSString*)n attrbute:(NSString*)a get:(NSString*)g skill:(NSArray*)s randSkill:(NSArray*)r;
+-(void)setSkillName:(NSString*)n;
 
 @end
 

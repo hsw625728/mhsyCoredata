@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		14DEE45AA12607E2DAAD73C4 /* libPods-mhsyCoredata.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2851A1F6BD095339B2FD033 /* libPods-mhsyCoredata.a */; };
+		580068361E4446160034EAC3 /* TablePetHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 580068351E4446160034EAC3 /* TablePetHeaderView.m */; };
+		582CBDAF1E44301000C2B58A /* TableJobHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 582CBDAE1E44301000C2B58A /* TableJobHeaderView.m */; };
 		58B2C5681E3604BC00F941B8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B2C5671E3604BC00F941B8 /* main.m */; };
 		58B2C56B1E3604BC00F941B8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B2C56A1E3604BC00F941B8 /* AppDelegate.m */; };
 		58B2C5711E3604BC00F941B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58B2C56F1E3604BC00F941B8 /* Main.storyboard */; };
@@ -35,6 +37,10 @@
 
 /* Begin PBXFileReference section */
 		1F957458766308A6A17CCCBA /* Pods-mhsyCoredata.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mhsyCoredata.release.xcconfig"; path = "Pods/Target Support Files/Pods-mhsyCoredata/Pods-mhsyCoredata.release.xcconfig"; sourceTree = "<group>"; };
+		580068351E4446160034EAC3 /* TablePetHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TablePetHeaderView.m; path = CustomViews/TablePetHeaderView.m; sourceTree = "<group>"; };
+		580068371E4446220034EAC3 /* TablePetHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TablePetHeaderView.h; path = CustomViews/TablePetHeaderView.h; sourceTree = "<group>"; };
+		582CBDAD1E442FFE00C2B58A /* TableJobHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TableJobHeaderView.h; path = CustomViews/TableJobHeaderView.h; sourceTree = "<group>"; };
+		582CBDAE1E44301000C2B58A /* TableJobHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableJobHeaderView.m; path = CustomViews/TableJobHeaderView.m; sourceTree = "<group>"; };
 		58B2C5631E3604BC00F941B8 /* mhsyCoredata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mhsyCoredata.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58B2C5671E3604BC00F941B8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		58B2C5691E3604BC00F941B8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -259,8 +265,12 @@
 				58B2C5B11E373F4E00F941B8 /* TableListCell.m */,
 				58B2C5B51E373F6E00F941B8 /* TableHeaderView.h */,
 				58B2C5B31E373F6400F941B8 /* TableHeaderView.m */,
+				582CBDAD1E442FFE00C2B58A /* TableJobHeaderView.h */,
+				582CBDAE1E44301000C2B58A /* TableJobHeaderView.m */,
 				58B2C5AF1E373F2500F941B8 /* TableJobDetailCell.h */,
 				58B2C5AD1E373F1600F941B8 /* TableJobDetailCell.m */,
+				580068371E4446220034EAC3 /* TablePetHeaderView.h */,
+				580068351E4446160034EAC3 /* TablePetHeaderView.m */,
 				58B2C5B61E37404700F941B8 /* TablePetDetailCell.h */,
 				58B2C5B71E37405300F941B8 /* TablePetDetailCell.m */,
 				58B2C5BB1E37448E00F941B8 /* TableSkillDetailCell.h */,
@@ -324,8 +334,7 @@
 				TargetAttributes = {
 					58B2C5621E3604BC00F941B8 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 887CVK63XR;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -425,7 +434,9 @@
 				58B2C5B41E373F6400F941B8 /* TableHeaderView.m in Sources */,
 				58B2C5AC1E373C0F00F941B8 /* SkillDetailViewController.m in Sources */,
 				58B2C5AE1E373F1600F941B8 /* TableJobDetailCell.m in Sources */,
+				582CBDAF1E44301000C2B58A /* TableJobHeaderView.m in Sources */,
 				58B2C5C01E3745D800F941B8 /* BaseCell.m in Sources */,
+				580068361E4446160034EAC3 /* TablePetHeaderView.m in Sources */,
 				58B2C5681E3604BC00F941B8 /* main.m in Sources */,
 				58B2C5A81E373BDA00F941B8 /* SkillListViewController.m in Sources */,
 				58B2C5A61E373BC600F941B8 /* PartnerDetailViewController.m in Sources */,
@@ -553,7 +564,8 @@
 			baseConfigurationReference = 95884B35ACDD9ED378C07247 /* Pods-mhsyCoredata.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 887CVK63XR;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = mhsyCoredata/mhsyCoredata.pch;
 				INFOPLIST_FILE = mhsyCoredata/Info.plist;
@@ -561,6 +573,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.mengyoutu.mhsyCoredata;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -569,6 +582,7 @@
 			baseConfigurationReference = 1F957458766308A6A17CCCBA /* Pods-mhsyCoredata.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = 887CVK63XR;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = mhsyCoredata/mhsyCoredata.pch;
@@ -577,6 +591,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.mengyoutu.mhsyCoredata;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b82a88f8-544d-4bfe-8566-d48c20b7beb8";
+				PROVISIONING_PROFILE_SPECIFIER = mhsyCoredata;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

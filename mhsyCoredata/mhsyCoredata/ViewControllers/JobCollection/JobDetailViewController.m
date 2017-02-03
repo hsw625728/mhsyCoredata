@@ -11,7 +11,7 @@
 #import "UIImage+Common.h"
 #import "JobDetailViewController.h"
 #import "TableJobDetailCell.h"
-#import "TableHeaderView.h"
+#import "TableJobHeaderView.h"
 
 @interface JobDetailViewController() <UITableViewDataSource, UITableViewDelegate>
 
@@ -73,7 +73,7 @@
         tableView.dataSource = self;
         tableView.delegate = self;
         
-        [tableView registerClass:[TableHeaderView class] forHeaderFooterViewReuseIdentifier:kTableHeaderViewID];
+        [tableView registerClass:[TableJobHeaderView class] forHeaderFooterViewReuseIdentifier:kTableJobHeaderViewID];
         [tableView registerClass:[TableJobDetailCell class] forCellReuseIdentifier:kTableJobDetailCellID];
         
         tableView.rowHeight = [TableJobDetailCell cellHeight];
@@ -107,7 +107,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TableJobDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:kTableJobDetailCellID forIndexPath:indexPath];
 
-    [cell setImage:jobListSkillNames[_jobIndex][indexPath.row] name:jobListSkillNames[_jobIndex][indexPath.row] desc:jobListSkillDesc[_jobIndex][indexPath.row]];
+    [cell setImage:[NSString stringWithFormat:@"%@_small", jobListSkillNames[_jobIndex][indexPath.row]] name:jobListSkillNames[_jobIndex][indexPath.row] desc:jobListSkillDesc[_jobIndex][indexPath.row]];
     return cell;
 }
 
@@ -115,13 +115,13 @@
 #pragma mark UITableViewDelegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return [TableHeaderView viewHeight];
+    return [TableJobHeaderView viewHeight];
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    TableHeaderView *view = [tableView dequeueReusableHeaderFooterViewWithIdentifier:kTableHeaderViewID];
-    //NSArray *category = [appDelegate.gMonsterCategroy allKeys];
-    //view.titleLabel.text = category[section];
+    TableJobHeaderView *view = [tableView dequeueReusableHeaderFooterViewWithIdentifier:kTableJobHeaderViewID];
+    
+    view.titleLabel.text = jobListDesc[_jobIndex];
     
     return view;
 }

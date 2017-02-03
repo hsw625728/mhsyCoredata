@@ -25,7 +25,7 @@ NSString *const kTableJobDetailCellID = @"kTableJobDetailCellID";
 #pragma mark - Class Method
 
 + (CGFloat)cellHeight {
-    return 100;
+    return 140;
 }
 
 #pragma mark - View Lifecycle
@@ -88,26 +88,18 @@ NSString *const kTableJobDetailCellID = @"kTableJobDetailCellID";
     _labelDesc = ({
         UILabel *label = [UILabel new];
         label.backgroundColor = [UIColor whiteColor];
-        label.font = FontWithSize(16);
+        label.font = FontWithSize(10);
         label.textColor = DMLightBlackTextColor;
-        label.numberOfLines = 3;
+        label.numberOfLines = 10;
         [self.contentView addSubview:label];
         [label mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.contentView).offset(51);
             make.left.equalTo(self.contentView).offset(8);
+            make.right.equalTo(self.contentView).offset(-8);
         }];
         
         label;
     });
-    
-    UIImageView *forwardView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"forward_info"]];
-    [self.contentView addSubview:forwardView];
-    [forwardView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.size.sizeOffset(CGSizeMake(6, 10));
-        make.centerY.equalTo(self.contentView);
-        //make.left.greaterThanOrEqualTo(_titleLabel.mas_right).offset(8);
-        make.right.equalTo(self.contentView).offset(-8);
-    }];
 }
 
 -(void)setImage:(NSString*)i name:(NSString*)n desc:(NSString*)d
